@@ -11,4 +11,12 @@ const filterNumbersAndDelimiters = (numbers) => {
   return { delimiter, numberString };
 };
 
-module.exports = { filterNumbersAndDelimiters };
+const checkNegativeNumbers = (numbersArray) => {
+  const negativeNumbers = numbersArray.filter((num) => num < 0);
+  if (negativeNumbers.length > 0) {
+    return { isNegative: true, negativeNumbers };
+  }
+  return { isNegative: false };
+};
+
+module.exports = { filterNumbersAndDelimiters, checkNegativeNumbers };

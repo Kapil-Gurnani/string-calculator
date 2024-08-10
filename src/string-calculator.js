@@ -1,4 +1,8 @@
-const { filterNumbersAndDelimiters } = require("../utils/helpers");
+const { NEGATIVE_NOT_ALLOWED, EMPTY_STRING } = require("../utils/errorMessages");
+const {
+  filterNumbersAndDelimiters,
+  checkNegativeNumbers,
+} = require("../utils/helpers");
 
 const add = (numbers) => {
   if (numbers === "") {
@@ -10,10 +14,18 @@ const add = (numbers) => {
 
   // Check for invalid sequences like ",\n" or ",," or "\n,"
   if (numberString.match(/,\n|\n,|,,|,\s*$/)) {
-    return "Invalid input format";
+    return EMPTY_STRING;
   }
 
   const delimiters = numberString.split(delimiter);
+
+  // Convert the split string elements to integers
+  const numbersArray = delimiters.map((num) => parseInt(num, 10) || 0);
+
+  const { isNegative, negativeNumbers } = checkNegativeNumbers(numbersArray);
+  if (isNegative) {
+    return `${NEGATIVE_NOT_ALLOWED} ${negativeNumbers.join(", ")}`;
+  }
 
   const result = delimiters.reduce(
     (sum, num) => sum + (parseInt(num, 10) || 0),
