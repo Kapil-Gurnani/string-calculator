@@ -1,0 +1,25 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kapil-Gurnani/string-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kapil-Gurnani/string-calculator/issues"
+  },
+  "homepage": "https://github.com/Kapil-Gurnani/string-calculator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
