@@ -1,7 +1,19 @@
-# string-calculator
+String Calculator
+============
 
-For setup this project, please run the below command
-npm install
+> My solution to a TDD kata made by [Roy Osherove](http://osherove.com/tdd-kata-1/).
 
-For running the test cases, please run the below command
-npm run test
+## Setup
+
+```
+    git clone https://github.com/Kapil-Gurnani/string-calculator.git
+    cd string-calculator/
+    npm install
+    npm run test
+    npm start
+```
+
+## Running code coverage
+```
+    npm run test
+```

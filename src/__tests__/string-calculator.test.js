@@ -1,5 +1,5 @@
-const { add } = require("../src/string-calculator");
-const { EMPTY_STRING, NEGATIVE_NOT_ALLOWED } = require("../src/utils/errorMessages");
+const { add } = require("../string-calculator");
+const { EMPTY_STRING, NEGATIVE_NOT_ALLOWED } = require("../utils/errorMessages");
 
 describe('String Calculator', () => {
     test('Check Empty String', () => {

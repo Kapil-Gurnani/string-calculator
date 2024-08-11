@@ -9,7 +9,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx jest"
+    "test": "npx jest",
+    "test:c":"npx jest -- --coverage"
   },
   "repository": {
     "type": "git",
