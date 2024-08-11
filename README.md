@@ -1,7 +1,4 @@
 String Calculator
-============
-
-> My solution to a TDD kata made by [Roy Osherove](http://osherove.com/tdd-kata-1/).
 
 ## Setup
 
