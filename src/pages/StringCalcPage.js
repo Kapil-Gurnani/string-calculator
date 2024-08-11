@@ -12,9 +12,7 @@ function StringCalcPage() {
 
     const handleButtonClick = () => {
         try {
-            console.log(input);
             const sum = add(input);
-            console.log(sum)
             setResult(sum);
             setError(null);
         } catch (err) {
@@ -36,8 +34,8 @@ function StringCalcPage() {
             <button onClick={handleButtonClick} style={{ padding: '10px 20px' }}>
                 Calculate
             </button>
-            {result !== null && <div style={{ marginTop: '20px' }}><strong>Result:</strong> {result}</div>}
-            {error && <div style={{ marginTop: '20px', color: 'red' }}><strong>Error:</strong> {error}</div>}
+            {result !== null && <div style={{ marginTop: '20px' }}><strong>Result: {result}</strong></div>}
+            {error && <div style={{ marginTop: '20px', color: 'red' }}><strong>Error: {error}</strong></div>}
         </div>
     );
 }
