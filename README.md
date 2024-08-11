@@ -14,7 +14,6 @@ String Calculator
 ```
 
 ## Running code coverage
-
 ```
-    node_modules/.bin/karma start karma.js
+    npm run test
 ```
