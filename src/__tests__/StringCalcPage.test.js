@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import StringCalcPage from "../src/pages/stringCalcPage";
-import { add } from "../src/string-calculator";
+import StringCalcPage from "../pages/stringCalcPage";
+import { add } from "../string-calculator";
 
 // Mock the add function from the string-calculator module
-jest.mock("../src/string-calculator", () => ({
+jest.mock("../string-calculator", () => ({
   add: jest.fn(),
 }));
 
